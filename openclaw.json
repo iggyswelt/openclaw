@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.1",
+    "lastTouchedAt": "2026-02-05T20:00:00.000Z"
+  },
+  "auth": {
+    "profiles": {
+      "openrouter:default": {
+        "provider": "openrouter",
+        "mode": "api_key"
+      },
+      "openrouter:manual": {
+        "provider": "openrouter",
+        "mode": "token"
+      },
+      "google:direct": {
+        "provider": "google",
+        "mode": "api_key"
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openrouter/anthropic/claude-3.5-sonnet",
+        "fallbacks": [
+          "openrouter/deepseek/deepseek-r1",
+          "openrouter/google/gemini-2.5-flash-lite",
+          "openrouter/anthropic/claude-3-haiku"
+        ]
+      },
+      "heartbeat": {
+        "every": "30m",
+        "model": "openrouter/google/gemini-2.5-flash-lite"
+      },
+      "subagents": {
+        "model": "openrouter/deepseek/deepseek-r1",
+        "maxConcurrent": 8
+      },
+      "models": {
+        "openrouter/auto": {
+          "alias": "auto"
+        },
+        "openrouter/deepseek/deepseek-v3.2": {
+          "alias": "deepseek"
+        },
+        "openrouter/deepseek/deepseek-r1": {
+          "alias": "deepseek-r1"
+        },
+        "openrouter/google/gemini-2.5-flash-lite": {
+          "alias": "flash"
+        },
+        "openrouter/anthropic/claude-3.5-sonnet": {
+          "alias": "sonnet"
+        },
+        "openrouter/anthropic/claude-3-opus": {
+          "alias": "opus"
+        },
+        "openrouter/anthropic/claude-3-haiku": {
+          "alias": "haiku"
+        }
+      },
+      "workspace": "/home/iggy/.openclaw/workspace",
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "maxConcurrent": 4
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto"
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "xxxxxxxxxxxxx",
+      "groupPolicy": "allowlist",
+      "streamMode": "partial"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "controlUi": {
+      "allowInsecureAuth": true
+    },
+    "trustedProxies": [
+      "127.0.0.1",
+      "100.64.0.0/10",
+      "fd7a::/64"
+    ],
+    "auth": {
+      "mode": "token",
+      "token": "xxxxxxxxxxxx"
+    },
+    "tailscale": {
+      "mode": "serve"
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "pnpm"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "telegram": {
+        "enabled": true
+      }
+    }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "wizard": {
+    "lastRunAt": "2026-02-04T17:08:49.139Z",
+    "lastRunVersion": "2026.2.1",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  }
+}
