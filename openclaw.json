@@ -74,10 +74,14 @@
   "channels": {
     "telegram": {
       "enabled": true,
-      "dmPolicy": "pairing",
-      "botToken": "xxxxxxxxxxxxx",
+      "dmPolicy": "allowlist",
+      "botToken": "XXXXXXXXXXX",
+      "allowFrom": [
+        "737961726"
+      ],
       "groupPolicy": "allowlist",
-      "streamMode": "partial"
+      "streamMode": "partial",
+      "mediaMaxMb": 50
     }
   },
   "gateway": {
@@ -94,7 +98,7 @@
     ],
     "auth": {
       "mode": "token",
-      "token": "xxxxxxxxxxxx"
+      "token": "XXXXXXXXXX"
     },
     "tailscale": {
       "mode": "serve"
