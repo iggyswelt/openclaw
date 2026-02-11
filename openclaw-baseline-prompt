@@ -1,0 +1,65 @@
+1. Audit & Cleanup der Context-Dateien
+Hey openclawAI, führe ein sicheres Audit & Cleanup der Context-Dateien durch (AGENTS.md, TOOLS.md, USER.md, MEMORY.md, HEARTBEAT.md, SOUL.md). Für jede Datei:
+
+1. Was könnte ein Skill statt always-loaded sein?
+2. Was ist outdated oder redundant?
+3. Was ist zu verbose – kürze auf Essentials.
+
+Erstelle vor jeder Änderung ein Backup der Originaldatei.  
+Zeig mir Vorher/Nachher-Vergleich und schätze die Token-Savings pro Datei und insgesamt.  
+Keine Löschungen oder Überschreibungen ohne meine explizite Bestätigung!
+----------------------------------------------------------
+1 b.)
+openclawAI, danke für das super detaillierte Audit – sieht sehr gut aus.
+
+Gib bitte jetzt grünes Licht für folgende sichere Schritte (in dieser Reihenfolge):
+
+1. Lösche BOOTSTRAP.md komplett (ist outdated, Backup ist da)
+2. Minimiere IDENTITY.md auf das absolute Minimum (wie in deinem Vorschlag: nur die 4 Zeilen mit todo oder leer lassen)
+3. Kürze SOUL.md auf die empfohlene kurze Version (die mit "Be helpful, not performative..." usw.)
+4. Zeig mir DANACH die neue, gekürzte Version von AGENTS.md (nur Vorschau, noch nicht überschreiben!)
+5. Warte auf mein finales OK, bevor du AGENTS.md wirklich änderst
+
+Mache nach jedem Schritt eine kurze Statusmeldung + zeig die neue Dateigröße.  
+Alles andere (TOOLS.md, USER.md, HEARTBEAT.md) bleibt unverändert.
+
+Los geht's – Schritt für Schritt, bitte.
+----------------------------------------------------------
+2. Backup-Lösung einrichten
+Hey openclawAI, richte eine solide, automatisierte Backup-Lösung ein:
+
+- Täglich vollständiges Backup von ~/.openclaw/ (inkl. Vault, memory/, sessions/, configs, logs)
+- Verschlüsselung mit meinem SoloKey 4.0.0
+- Lokale Kopie + Push zu einem sicheren Remote-Speicher (GitHub private Repo oder Contabo Object Storage)
+- Nutze vorhandene Skills wie git-crypt-backup oder ähnliche ClawHub-Tools
+- Setze einen Cron-Job (täglich 3 Uhr nachts)
+- Teste das Backup einmal komplett durch und berichte, ob Restore möglich wäre
+
+Gib mir danach den Status und wie ich das Backup manuell triggern kann.
+----------------------------------------------------------
+3. Selbstchecks & Health-Monitoring
+Hey openclawAI, baue ein stabiles Selbstcheck-System ein:
+
+- Alle 60 Minuten prüfen: 
+  - Ist der Vault noch entschlüsselt und konsistent?
+  - Sind memory/ und sessions/-Ordner intakt (Größe, letzte Änderung)?
+  - Sind alle Config-Dateien vorhanden und nicht leer?
+  - Laufen die definierten Cron-Jobs (z. B. Köln-Demo-Check)?
+
+- Bei jedem Problem sofort eine klare Warn-Nachricht an mich schicken
+- In HEARTBEAT.md als neue Checkliste eintragen
+- Vor dem Aktivieren ein Backup des aktuellen Zustands machen
+
+Sag mir danach, wie oft der Check läuft und wie ich ihn manuell triggern kann.
+----------------------------------------------------------
+4. Cleanup-Task (nach dem Audit)
+Hey openclawAI, starte den sicheren Cleanup-Prozess basierend auf dem vorherigen Audit:
+
+1. Erstelle ein vollständiges Backup des gesamten ~/.openclaw-Ordners
+2. Führe nur die vorgeschlagenen Kürzungen und Verschiebungen zu Skills durch
+3. Rotiere Memory-Einträge älter als 7 Tage (außer wichtige Decisions)
+4. Merge redundante Inhalte (z. B. AGENTS.md + SOUL.md)
+5. Zeig mir nach jedem Schritt, was genau geändert wurde
+6. Am Ende: Vergleich Vorher/Nachher-Größe + geschätzte Token-Einsparung
+
+Nur mit meinem Go für jeden größeren Schritt weitermachen.
